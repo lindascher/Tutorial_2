@@ -1,20 +1,18 @@
-package org.example;
+package shapes;
 
 import java.awt.*;
 
-public class Circle {
+public class Circle extends Shape {
     private int radius;
-    private Point position;
-    private Color color;
 
-    // Constructor to initialize the circle's properties
+    // Constructor
     public Circle(int radius, Point position, Color color) {
+        super(position, color);  // Calls the superclass constructor
         this.radius = radius;
-        this.position = position;
-        this.color = color;
     }
 
-    // Method to draw the circle
+    // Override draw method to draw a circle
+    @Override
     public void draw(Graphics g) {
         g.setColor(color);
         g.fillOval(position.x - radius, position.y - radius, 2 * radius, 2 * radius);

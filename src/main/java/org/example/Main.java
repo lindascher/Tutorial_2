@@ -15,6 +15,7 @@ public class Main {
         frame.setSize(400, 400);
         frame.setVisible(true);
 
+        // Adding window listener to close the window
         frame.addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent windowEvent) {
                 frame.dispose();
